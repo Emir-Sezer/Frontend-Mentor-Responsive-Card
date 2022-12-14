@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+.container{
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.grid{
+    background-color: #fff;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.img img{
+    display: inherit;
+    max-width: 100%;
+}
+
+.main-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+p.main-prew{
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+h2.main-name{
+    font-family: serif;
+    font-size: 38px;
+    color: hsl(212, 21%, 14%);
+    line-height: 1em;
+}
+
+p.main-des{
+    color: hsl(228, 12%, 48%);
+    font-size: 17px;
+    line-height: 1.6em;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+.price p.main-price{
+    font-family: serif;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+    font-size: 35px;
+    padding-right: 20px;
+}
+
+del{
+    color: hsl(228, 12%, 48%);
+}
+
+button.btn{
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 14px 0;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    width: 100%;
+}
+
+button.btn:hover{
+    background-color: hsl(158, 36%, 24%);
+}
+
+button img.icon{
+    padding-right: 7px;
+}
+
+img.icon{
+    display: inline-block;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+@media only screen and (max-width:650px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    p.main-prew, h2.main-name, p.main-des, .price{
+        padding-bottom: 23px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .container{
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    .main-card{
+        padding: 24px;
+    }
+    p.main-prew, h2.main-name, p.main-des, .price{
+        padding-bottom: 16px;
+    }
+    h2.main-name{
+        font-size: 28px;
+    }
+    p.main-des{
+        font-size: 12px;
+    }
+    .price p.main-price{
+        font-size: 23px;
+    }
+    button.btn{
+        padding: 12px 0;
+        font-size: 13px;
+    }
+}
